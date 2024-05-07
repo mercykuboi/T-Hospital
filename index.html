@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" 
+    integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="appointment.css"/>
+<link href="tablet.css" rel="stylesheet" type="text/css"
+    media="only screen and (max-device-width:800px), only screen and (-webkit-min-device-pixel-ratio: 2) , screen and (-webkit-device-pixel-ratio:1.5)">
+<link href="phone.css" rel="stylesheet" type="text/css"
+    media="only screen and (max-device-width:450px), only screen and
+     (-webkit-min-device-pixel-ratio: 2) , screen and (-webkit-device-pixel-ratio:1.5)">
+<script src="appointment.js"> </script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.1/gsap.min.js"></script>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+    <script src="js/responsiveslides.min.js"></script>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transnzoia Hospital </title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  
+    <link rel="stylesheet" href="appointment.css">
+    <link rel="stylesheet" href="styles.scss">
+</head>
+<body>
+    <header>
+        <!-- header start -->
+        <input type ="checkbox" name ="" id ="chk1">
+        <div class="logo"><h1>T-Hospital</h1></div>
+            <div class="search-box">
+                <form>
+                    <input type ="text" name ="search" id ="srch" placeholder="Search">
+                    <button type ="submit"><i class="fa fa-search"></i></button>
+                </form>
+            </div>
+            <ul>
+                <li><a href="#home" style="--i:1" class="active" >Home</a></li>
+                <li><a href="#services" style="--i:1" class="active" >SERVICES</a></li>
+                <li><a href="#appointment" style="--i:1" class="active" >BOOKING</a></li>
+                <li><a href="#test" style="--i:1" class="active" >TESTIMONIALS</a></li>
+                <li><a href="#Contact" style="--i:1" class="active" >CONTACT</a></li>
+                <li>
+                    <a href="#"><i class="fa fa-facebook"></i></a>
+                    <a href="#"><i class="fa fa-twitter"></i></a>
+                    <a href="#"><i class="fa fa-instagram"></i></a>
+                      
+                </li>
+            </ul>
+            <div class="menu">
+                <label for="chk1">
+                    <i class="fa fa-bars"></i>
+                </label>
+            </div>
+    </header>
+    <!-- header ends -->
+                
+    
+    <!-- home section starts -->
+     <section id="home">
+        <div class="container-home">
+        <div class="slide">
+            <div class="item" style="background-image: url('images/radiology.jpg');">
+                <div class="content">
+                    <div class="name">MISSION</div>
+                    <div class="des">We seek to improve lives of our patients
+                     and manage people with health conditions or impairments
+                        by providing care,treatment and ensure we manage their health.
+                    </div>
+                </div>
+            </div>
+            <div class="item" style="background-image: url('images/slide2.png');">
+                <div class="content">
+                    <div class="name">ABOUT</div>
+                    <div class="des">T-Hospital began in 2022.The hospital offers services to large number
+                        of people,to treat patients and manage people with health conditions or
+                         impairments/special needs.
+                    </div>
+                </div>
+            </div>
+            <div class="item" style="background-image: url('images/lab.jpg');">
+                <div class="content">
+                    <div class="name">VISION</div>
+                    <div class="des">To create a world which everyone is accessible to Healthcare and Support
+                        services as a right regardless of their health conditions or impairments.
+                    </div>
+                </div>
+            </div>
+            <div class="item" style="background-image: url('images/oncology.jpg');">
+                <div class="content">
+                    <div class="name">GOAL</div>
+                    <div class="des">To ensure that our organization provides resources along with
+                        Basic and In-Home Support services to our anticipated or eligible clients
+                         in Minnesota with special focus to the marginalized population.
+                    </div>
+                </div>
+            </div>
+    
+        </div>
+    
+        <div class="button">
+            <button class="prev"><i class="fa-solid fa-arrow-left"></i></button>
+            <button class="next"><i class="fa-solid fa-arrow-right"></i></button>
+        </div>
+    
+    </div>
+    <script>let next = document.querySelector('.next')
+        let prev = document.querySelector('.prev')
+        
+        next.addEventListener('click', function(){
+            let items = document.querySelectorAll('.item')
+            document.querySelector('.slide').appendChild(items[0])
+        })
+        
+        prev.addEventListener('click', function(){
+            let items = document.querySelectorAll('.item')
+            document.querySelector('.slide').prepend(items[items.length - 1]) // here the length of items = 6
+        })</script>
+    </section>
+    <!-- home section ends -->
+     
+    <!-- service section start -->
+    <section id="services">
+        <div class="containerT">
+            <h4>OUR<span>SERVICES</span></h4>
+            <div class="card__container">
+               <article class="card__article">
+                  <img src="images/lab.jpg" alt="image" class="card__img">
+   
+                  <div class="card__data">
+                     <span class="card__description">Our services include: Chemistry; 24-hour blood bank services, including typing and cross-matching
+                        blood; Coagulation;
+                        Flow cytometry; Hematology; Immunology</span>
+                     <h2 class="card__title">Lab Services</h2>
+                  </div>
+               </article>
+   
+               <article class="card__article">
+                  <img src="images/surgion.jpg" alt="image" class="card__img">
+   
+                  <div class="card__data">
+                     <span class="card__description">supports surgical specialties. Examples. Anaesthesiology, cardiovascular surgery, ENT, general
+                        surgery, OB/GYN,
+                        orthopaedics, pathology, podiatr</span>
+                     <h2 class="card__title">Surgical Services</h2>
+                  </div>
+               </article>
+   
+               <article class="card__article">
+                  <img src="images/radiology.jpg" alt="image" class="card__img">
+   
+                  <div class="card__data">
+                     <span class="card__description">diagnosing and treating disease and injury, using medical imaging techniques such as x-rays, computed
+                        tomography (CT),
+                        magnetic resonance imaging (MRI), nuclear medicine, positron emission tomography (PET),
+                        fusion imaging, and ultrasound</span>
+                     <h2 class="card__title">Radiology</h2>
+                  </div>
+               </article>
+               <article class="card__article">
+                <img src="images/blood.jpg" alt="image" class="card__img">
+ 
+                <div class="card__data">
+                   <span class="card__description">Our services include: 24-hour blood bank services, including typing and cross-matching blood;
+                    Coagulation;
+                    Flow cytometry; Hematology; Immunologybutton">Read More</span>
+                   <h2 class="card__title">Radiology</h2>
+                </div>
+             </article>
+
+             <article class="card__article">
+                <img src="images/ambulence.jpg" alt="image" class="card__img">
+ 
+                <div class="card__data">
+                   <span class="card__description">The department of a hospital responsible for the provision of medical and surgical care to patients
+                    arriving at the
+                    hospital in need of immediate care. Emergency department personnel may also respond to certain
+                    situations within the
+                    hospital such cardiac arrests</span>
+                   <h2 class="card__title">Emergency services</h2>
+                </div>
+             </article>
+            </div>
+         </div>
+    </section>
+<!-- service section ends -->
+
+  <!-- appointment section start -->
+    <section id="appointment">
+        <div class="containerT">
+            <h1>BOOK <span>US</span></h1>
+            <div class="card__container">
+               <article class="card__article">
+                  <img src="images/box.jpg" alt="image" class="card__img">
+   
+                  <div class="card__data">
+                     <span class="card__description">Patients Register & Book Appointment</span>
+                     <h2 class="card__title">PATIENTS</h2>
+                     <a href="patient_login.php" class="card__button">LOGIN</a>
+                  </div>
+               </article>
+   
+               <article class="card__article">
+                  <img src="images/oncology.jpg" alt="image" class="card__img">
+   
+                  <div class="card__data">
+                     <span class="card__description">Doctors log into the system</span>
+                     <h2 class="card__title">Doctors </h2>
+                     <a href="doctor_login.php" class="card__button">DOCTORS</a>
+                  </div>
+               </article>
+   
+               <article class="card__article">
+                  <img src="images/dermatologist.jpg" alt="image" class="card__img">
+   
+                  <div class="card__data">
+                     <span class="card__description">Hospital Admin</span>
+                     <h2 class="card__title">Radiology</h2>
+                     <a href="login.php" class="card__button">ADMIN</a>
+                  </div>
+               </article>
+            </div>
+         </div>       
+    </section>
+    <!-- appointment section ends -->
+    <section id="test">
+    <div class="section__container">
+        <div class="headerC">
+          <p>TESTIMONIALS</p>
+          <h1>What our clients say about us.</h1>
+        </div>
+        <div class="testimonials__grid">
+          <div class="card-C">
+            <span><i class="ri-double-quotes-l"></i></span>
+            <p>
+              I've been treated with T-Hospital for a long time and I can say that
+              their services is on top.
+            </p>
+            <hr />
+            <img src="images/review2.jpg" alt="user" />
+            <p class="name">MR Collins</p>
+          </div>
+          <div class="card-C">
+            <span><i class="ri-double-quotes-l"></i></span>
+            <p>
+              All I can say,T-Hospital system is fast and more efficient and save
+              cost.
+            </p>
+            <hr />
+            <img src="images/review.jpg" alt="user" />
+            <p class="name">MISS Clare</p>
+          </div>
+          <div class="card-C">
+            <span><i class="ri-double-quotes-l"></i></span>
+            <p>
+              with the system I was able to re-adjust my schedule more easily
+              the system is user-friendly.
+            </p>
+            <hr />
+            <img src="images/review2.jpg" alt="user" />
+            <p class="name">MR James</p>
+          </div>
+        </div>
+      </div>
+      </section>
+    
+        <!-- contact section start -->
+        <section class="contacts" id="Contact">
+                <h2>CONTACT <span>US</span></h2>
+                <div class="containerC">
+                    <div class="contactInfo">
+                        <div class="box">
+                            <div class="icon"><i class="fa fa-map-marker" aria-hidden="true"></i></div>
+                            <div class="text">
+                                <h3>Address</h3>
+                                <p>8428 Chicago Avenue South,<br>
+                                    Bloomington,<br>
+                                    MN 55420.</p>
+                            </div>
+                        </div>
+                        <div class="box">
+                            <div class="icon"><i class="fa fa-phone" aria-hidden="true"></i></div>
+                            <div class="text">
+                                <h3>Phone</h3>
+                                <p><a href="tel:+19525836025">+1 (952) 583-6025</a></p>
+                                    <p><a href="tel:+19529940887">+1 (952) 994-0887</a></p>
+                            </div>
+                        </div>
+                        <div class="box">
+                            <div class="icon"><i class="fa fa-envelope-o" aria-hidden="true"></i></i></div>
+                            <div class="text">
+                                <h3>Email</h3>
+                                <p><a href="mailto:pierson@somgen.co">pierson@somgen.co</a></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="contactForm">
+                        <form>
+                            <h6>Send Message</h6>
+                            <div class="inputBox">
+                                <input type="text" required="required">
+                                <span>Full Name</span>
+                            </div>
+                            <div class="inputBox">
+                                <input type="text" required="required">
+                                <span>Email</span>
+                            </div>
+                            <div class="inputBox">
+                                <textarea name="" id="" required="required"></textarea>
+                                <span>Type your Message...</span>
+                            </div>
+                            <div class="inputBox">
+                                <input type="submit" value="Send">
+                            </div>
+                        </form>
+                    </div>      
+                </div>
+            </div>
+            
+        </section>
+        <!-- contact section ends-->
+        
+        <div class="last-text">
+            <p>Developed By ** <a href="mailto:mercykuboi@gmail.com"> mercy kuboi</a>** <i class='bx bx-copyright' style="color: white;"></i> 2024</p>
+        </div>
+        <a href="#Home" class="top"><i class='bx bx-up-arrow-alt' ></i></a>
+
+        <script src="script.js"></script>
+</body>
+</html>
+
+        
+
+    
